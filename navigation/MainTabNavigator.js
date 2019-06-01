@@ -7,7 +7,7 @@ import {
 
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
-import LinksScreen from "../screens/LinksScreen";
+import SignUpScreen from "../screens/SignUpScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import RandomMem from "../screens/RandomMem";
 
@@ -29,12 +29,12 @@ HomeStack.navigationOptions = {
   )
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen
+const SignUpStack = createStackNavigator({
+  SignUp: SignUpScreen
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: "Links",
+SignUpStack.navigationOptions = {
+  tabBarLabel: "SignUp",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -73,7 +73,7 @@ MemStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  SignUpStack,
   SettingsStack,
   RandomMem
 });
