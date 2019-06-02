@@ -62,7 +62,7 @@ const MemStack = createStackNavigator({
 });
 
 MemStack.navigationOptions = {
-  tabBarLabel: "Mem",
+  tabBarLabel: "Random Meme",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

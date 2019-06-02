@@ -18,17 +18,17 @@ export default class SignInScreen extends React.Component {
         
 
       <ScrollView style={styles.container}>
-        <Text>Email:</Text>
+        <Text style = {{borderBottomWidth: 2, borderBottomColor:'grey'}}>Email:</Text>
 
         <TextInput
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40}}
           onChangeText={(email) => this.setState({email})}
           value={this.state.email}
         />
 
-        <Text>Password:</Text>
+        <Text style = {{borderBottomWidth: 2, borderBottomColor:'grey'}}>Password:</Text>
         <TextInput secureTextEntry={true}
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40}}
           onChangeText={(password) => this.setState({password})}
           value={this.state.password}
         />

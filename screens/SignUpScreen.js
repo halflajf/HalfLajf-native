@@ -22,30 +22,30 @@ export default class LinksScreen extends React.Component {
         
 
       <ScrollView style={styles.container}>
-       <Text>Username:</Text>
+       <Text style = {{borderBottomWidth: 2, borderBottomColor:'grey'}}>Username:</Text>
        <TextInput
-        style={{height: 40, borderColor: 'black', borderBottomWidth: 5}}
+        style={{height: 40}}
         onChangeText={(username) => this.setState({username})}
         value={this.state.username}
       />
 
-       <Text>Email:</Text>
+       <Text style = {{borderBottomWidth: 2, borderBottomColor:'grey'}}>Email:</Text>
        <TextInput
-        style={{height: 40, borderColor: 'black', borderBottomWidth: 1}}
+        style={{height: 40}}
         onChangeText={(email) => this.setState({email})}
         value={this.state.email}
       />
 
-      <Text>Password:</Text>
+      <Text style = {{borderBottomWidth: 2, borderBottomColor:'grey'}}>Password:</Text>
       <TextInput secureTextEntry={true}
-        style={{height: 40, borderColor: 'black', borderBottomWidth: 1}}
+        style={{height: 40}}
         onChangeText={(password) => this.setState({password})}
         value={this.state.password}
       />
 
-      <Text>Confirm password:</Text>
+      <Text style = {{borderBottomWidth: 2, borderBottomColor:'grey'}}>Confirm password:</Text>
       <TextInput secureTextEntry={true}
-        style={{height: 40, borderColor: 'black', borderBottomWidth: 1}}
+        style={{height: 40}}
         onChangeText={(confirmPassword) => this.setState({confirmPassword})}
         value={this.state.confirmPassword}
       />

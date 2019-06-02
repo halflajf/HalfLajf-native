@@ -1,6 +1,6 @@
 import React from "react";
-import { Image, View, Text, Button } from "react-native";
-
+import {ScrollView, Text, Button, Dimensions } from "react-native";
+import Image from 'react-native-scalable-image';
 import { Accelerometer } from "expo";
 const API = "https://some-random-api.ml/meme";
 
@@ -15,6 +15,7 @@ class RandomMem extends React.Component {
       accelerometerData: { x: 0 }
     };
   }
+ 
 
   componentDidMount() {
     this.getRandomMem();
@@ -64,14 +65,21 @@ class RandomMem extends React.Component {
     }
 
     return (
-      <View>
+      <>
+      <ScrollView>
         <Image
           source={{ uri: mem.image }}
-          style={{ width: 400, height: 400 }}
+          width={Dimensions.get('window').width}
         />
         {this.state.accelerometerData < -25 && this.getRandomMem()}
-        <Button onPress={this.getRandomMem} title="Roll next!" />
-      </View>
+
+      </ScrollView>
+      <Button 
+              color="#f57c00"
+              title="Roll next!"
+              onPress={this.getRandomMem}  
+      />
+      </>
     );
   }
 }
