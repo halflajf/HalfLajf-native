@@ -7,8 +7,8 @@ import {
 
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
+import SignInScreen from "../screens/SignInScreen";
 import SignUpScreen from "../screens/SignUpScreen";
-import SettingsScreen from "../screens/SettingsScreen";
 import RandomMem from "../screens/RandomMem";
 
 const HomeStack = createStackNavigator({
@@ -29,12 +29,12 @@ HomeStack.navigationOptions = {
   )
 };
 
-const SignUpStack = createStackNavigator({
-  SignUp: SignUpScreen
+const SignInStack = createStackNavigator({
+  SignIn: SignInScreen
 });
 
-SignUpStack.navigationOptions = {
-  tabBarLabel: "SignUp",
+SignInStack.navigationOptions = {
+  tabBarLabel: "SignIn",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -43,12 +43,12 @@ SignUpStack.navigationOptions = {
   )
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen
+const SignUpStack = createStackNavigator({
+  SignUp: SignUpScreen
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: "Settings",
+SignUpStack.navigationOptions = {
+  tabBarLabel: "SignUp",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -73,7 +73,7 @@ MemStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
+  SignInStack,
   SignUpStack,
-  SettingsStack,
   RandomMem
 });
