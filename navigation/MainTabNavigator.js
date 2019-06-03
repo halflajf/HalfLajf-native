@@ -62,18 +62,17 @@ const MemStack = createStackNavigator({
 });
 
 MemStack.navigationOptions = {
-  tabBarLabel: "Random Meme",
+  tabBarLabel: "RandomMem",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === "ios" ? "ios-options" : "md-options"}
+      name={Platform.OS === "ios" ? "ios-cube" : "md-cube"}
     />
   )
 };
-
 export default createBottomTabNavigator({
   HomeStack,
   SignInStack,
   SignUpStack,
-  RandomMem
+  MemStack
 });
